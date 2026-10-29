@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optigrid | Automação e Instalação Predial e Eletroeletrônica</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #444;
+            background-color: #fcfcfc;
+        }
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 180px 0;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: #0d6efd;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .service-card, .project-card, .team-card, .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px;
+            background: #fff;
+        }
+        .service-card:hover, .project-card:hover, .team-card:hover, .testimonial-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .team-img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 3px solid #0d6efd;
+        }
+        .social-icons a {
+            color: #6c757d;
+            transition: color 0.2s;
+        }
+        .social-icons a:hover {
+            color: #0d6efd;
+        }
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVBAR FIXA -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75 backdrop-blur border-bottom border-white border-opacity-10 py-3 transition-all" id="mainNavbar">
+        <div class="container">
+            <!-- Logo da Empresa -->
+            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2 text-white" href="#">
+                <i class="fa-solid fa-cube text-primary"></i> Optigrid
+            </a>
+
+            <!-- Botão Menu Mobile -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de Navegação -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-lg-3 mb-3 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-text-white active" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-text-white" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-text-white" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-text-white" href="#depoimentos">Avaliações</a>
+                    </li>
+                </ul>
+                <div class="ms-lg-3">
+                    <a href="#contato" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm text-white">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (O INÍCIO DA PÁGINA) -->
+    <header id="home" class="position-relative min-vh-100 d-flex align-items-center overflow-hidden text-white" style="background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%); padding-top: 80px;">
+        <!-- Elementos decorativos de luz ao fundo (Glows Abstratos) -->
+        <div class="position-absolute top-50 start-50 translate-middle bg-primary opacity-15 rounded-circle" style="width: 600px; height: 600px; filter: blur(120px); pointer-events: none;"></div>
+
+        <div class="container position-relative z-1 py-5">
+            <div class="row align-items-center g-5">
+                
+                <!-- Coluna de Texto Principal -->
+                <div class="col-lg-7 text-center text-lg-start">
+                    <!-- Badge de Destaque no Topo -->
+                    <div class="d-inline-flex align-items-center bg-white bg-opacity-10 border border-white border-opacity-10 px-3 py-2 rounded-pill mb-4 shadow-sm">
+                        <span class="badge bg-primary text-white me-2 rounded-pill px-2 py-1">Novo</span>
+                        <span class="text-light small">Excelência em Engenharia & Automação</span>
+                    </div>
+
+                    <!-- Título Principal de Impacto -->
+                    <h1 class="display-4 fw-bold text-white mb-4 lh-tight">
+                        Eleve a eficiência do seu negócio com <span class="text-primary">tecnologia de ponta</span>.
+                    </h1>
+
+                    <!-- Subtítulo Explicativo -->
+                    <p class="lead text-light opacity-75 mb-5 fs-6 col-lg-10 mx-auto mx-lg-0">
+                        Especialistas em automação industrial e residencial, energias renováveis, instalações elétricas estruturadas e manutenção eletroeletrônica de alta precisão.
+                    </p>
+
+                    <!-- Botões de Ação (CTAs) -->
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                        <a href="#servicos" class="btn btn-primary btn-lg rounded-pill px-4 py-3 fw-semibold shadow">
+                            Conhecer Nossos Serviços <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                        </a>
+                        <a href="#contato" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+
+                    <!-- Mini Prova Social Rápida no Rodapé do Hero -->
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-4 mt-5 pt-4 border-top border-white border-opacity-10">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="text-warning small">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="fw-bold small text-white">4.9 / 5.0</span>
+                        </div>
+                        <span class="text-white opacity-25">|</span>
+                        <span class="text-light opacity-75 small">+120 Projetos Entregues com Sucesso</span>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / Composição Moderna à Direita -->
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="position-relative">
+                        <!-- Imagem principal imersiva de engenharia -->
+                        <div class="rounded-4 overflow-hidden shadow-2xl border border-white border-opacity-15 position-relative" style="height: 480px;">
+                            <img src="https://ead.unimar.br/wp-content/uploads/2025/11/Engenharia-de-Automacao-e-Controle-1536x861.jpg" class="w-100 h-100 object-fit-cover" alt="Engenharia e Inovação Optigrid">
+                            <!-- Gradiente de sobreposição interno na foto -->
+                            <div class="position-absolute inset-0 bg-dark opacity-25"></div>
+                        </div>
+
+                        <!-- Card Flutuante Interativo de Confiabilidade -->
+                        <div class="position-absolute bottom-0 start-0 translate-middle-x ms-4 mb-4 bg-dark bg-opacity-75 backdrop-blur p-3 rounded-4 border border-white border-opacity-15 shadow-lg d-flex align-items-center gap-3">
+                            <div class="bg-success text-white rounded-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem;">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-white mb-0 small">Sistemas Certificados</h6>
+                                <p class="text-light opacity-75 mb-0" style="font-size: 0.75rem;">Normas técnicas rigorosas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Sobre a Optigrid" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h6 class="text-primary fw-bold text-uppercase tracking-wide">Quem Somos</h6>
+                    <h2 class="fw-bold mb-4 text-dark">Soluções inteligentes para ambientes modernos e seguros</h2>
+                    <p class="text-muted mb-4">A <b>Optigrid</b> é referência em soluções integradas de engenharia elétrica, automação predial e sistemas eletroeletrônicos. Nossa missão é otimizar o consumo de energia, garantir rigorosos padrões de segurança e proporcionar total controle e conforto para ambientes corporativos e residenciais.</p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="p-3 border rounded-3 bg-light">
+                                <h3 class="text-primary fw-bold mb-1">+150</h3>
+                                <p class="text-muted small mb-0">Projetos Executados</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 border rounded-3 bg-light">
+                                <h3 class="text-primary fw-bold mb-1">100%</h3>
+                                <p class="text-muted small mb-0">Clientes Satisfeitos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSSOS SERVIÇOS (VERSÃO PREMIUM) -->
+   <section id="servicos" class="py-5 bg-white position-relative">
+        <div class="container py-5">
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center mb-5">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill fw-semibold">
+                    <i class="fa-solid fa-layer-group me-1"></i> Especialidades Técnicas
+                </span>
+                <h2 class="section-title mb-3">Nossos Serviços</h2>
+                <p class="text-muted col-lg-6 mx-auto small">Soluções completas e eficientes em engenharia elétrica, automação inteligente e sustentabilidade para o seu negócio ou residência.</p>
+            </div>
+
+            <!-- Grid de Serviços -->
+            <div class="row g-4">
+                
+                <!-- 1. Automação Industrial & Residencial -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card border border-light-subtle shadow-sm rounded-4 p-4 h-100 bg-white position-relative transition-all">
+                        <div class="feature-icon bg-primary bg-opacity-10 text-primary rounded-4 d-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark h5 mb-3">Automação Industrial & Residencial</h4>
+                        <p class="text-muted small mb-4">Sistemas inteligentes que unem conectividade, controle remoto e ganho drástico de produtividade e conforto.</p>
+                        <ul class="list-unstyled text-muted small mb-4">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Indústria 4.0 e robótica</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Casas inteligentes e IoT</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Integração de processos lógicos</li>
+                        </ul>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="#contato" class="text-decoration-none fw-semibold text-primary small d-inline-flex align-items-center">
+                                Saber mais <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Energias Renováveis -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card border border-light-subtle shadow-sm rounded-4 p-4 h-100 bg-white position-relative transition-all">
+                        <div class="feature-icon bg-success bg-opacity-10 text-success rounded-4 d-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark h5 mb-3">Energias Renováveis</h4>
+                        <p class="text-muted small mb-4">Soluções sustentáveis focadas em transição energética limpa e alta rentabilidade a médio e longo prazo.</p>
+                        <ul class="list-unstyled text-muted small mb-4">
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Sistemas fotovoltaicos</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Redução de custos com energia</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Eficiência eco-sustentável</li>
+                        </ul>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="#contato" class="text-decoration-none fw-semibold text-success small d-inline-flex align-items-center">
+                                Saber mais <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Instalação Elétrica -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card border border-light-subtle shadow-sm rounded-4 p-4 h-100 bg-white position-relative transition-all">
+                        <div class="feature-icon bg-warning bg-opacity-10 text-warning rounded-4 d-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark h5 mb-3">Instalação Elétrica</h4>
+                        <p class="text-muted small mb-4">Infraestrutura robusta de baixa e média tensão, garantindo máxima segurança operacional e conformidade com as normas.</p>
+                        <ul class="list-unstyled text-muted small mb-4">
+                            <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Redes elétricas estruturadas</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Quadros de distribuição e painéis</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Laudos e conformidade técnica</li>
+                        </ul>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="#contato" class="text-decoration-none fw-semibold text-warning small d-inline-flex align-items-center">
+                                Saber mais <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Montagem e Manutenção de Equipamentos Eletroeletrônicos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card border border-light-subtle shadow-sm rounded-4 p-4 h-100 bg-white position-relative transition-all">
+                        <div class="feature-icon bg-info bg-opacity-10 text-info rounded-4 d-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark h5 mb-3">Montagem & Manutenção Eletroeletrônica</h4>
+                        <p class="text-muted small mb-4">Serviços especializados na montagem de dispositivos e manutenção preventiva/corretiva de alta precisão.</p>
+                        <ul class="list-unstyled text-muted small mb-4">
+                            <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Manutenção preventiva e corretiva</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Bancadas e placas eletrônicas</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Testes de estresse e calibração</li>
+                        </ul>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="#contato" class="text-decoration-none fw-semibold text-info small d-inline-flex align-items-center">
+                                Saber mais <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Otimização de Sistemas (Corrigido para fundo escuro) -->
+                <div class="col-lg-8 col-md-6">
+                    <div class="card service-card border border-secondary border-opacity-25 shadow-sm rounded-4 p-4 h-100 position-relative overflow-hidden text-white" style="background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);">
+                        <div class="position-absolute top-0 end-0 p-4 opacity-10 display-3 text-primary" style="pointer-events: none;">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="feature-icon bg-primary text-white rounded-4 d-flex align-items-center justify-content-center mb-4 shadow" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h4 class="fw-bold text-white h5 mb-3">Otimização de Sistemas & Performance</h4>
+                        <p class="text-light opacity-85 small mb-4">Auditoria completa de sistemas ativos para redução de consumo energético, eliminação de gargalos e aumento de vida útil dos ativos tecnológicos da sua empresa.</p>
+                        <div class="d-flex flex-wrap gap-3 text-light small mb-4">
+                            <span><i class="fa-solid fa-circle-check text-info me-1"></i> Auditoria Energética</span>
+                            <span><i class="fa-solid fa-circle-check text-info me-1"></i> Redução de Downtime</span>
+                            <span><i class="fa-solid fa-circle-check text-info me-1"></i> Modernização Tecnológica</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-top border-white border-opacity-10">
+                            <a href="#contato" class="text-decoration-none fw-semibold text-info small d-inline-flex align-items-center">
+                                Solicitar otimização <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- PROJETOS (VERSÃO PREMIUM COM IMAGEM ATUALIZADA) -->
+    <section id="projetos" class="py-5 bg-white">
+        <div class="container py-5">
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center mb-5">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill fw-semibold">
+                    <i class="fa-solid fa-gears me-1"></i> Portfólio Técnico
+                </span>
+                <h2 class="section-title mb-3">Projetos em Destaque</h2>
+                <p class="text-muted col-lg-6 mx-auto small">Conheça algumas de nossas entregas de alta complexidade em automação industrial, predial e infraestrutura elétrica.</p>
+            </div>
+
+            <!-- Grid de Projetos -->
+            <div class="row g-4">
+                
+                <!-- Projeto 1: Esteira Automatizada -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card shadow-sm h-100 overflow-hidden border-0 rounded-4">
+                        <div class="position-relative overflow-hidden" style="height: 240px;">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover transition-scale" alt="Montagem de Esteira Automatizada">
+                            <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 rounded-pill small">
+                                <i class="fa-solid fa-industry me-1 text-primary"></i> Automação Industrial
+                            </span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark mb-2">Esteira Automatizada (Indústria 4.0)</h5>
+                            <p class="card-text text-muted small mb-4">Montagem, integração de sensores IoT e programação de lógica para linha de produção automatizada de alta velocidade.</p>
+                            <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
+                                <span class="text-primary small fw-semibold">Setor Industrial</span>
+                                <a href="#contato" class="btn btn-sm btn-outline-primary rounded-pill px-3">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Quadro Elétrico e Painel de Comando -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card shadow-sm h-100 overflow-hidden border-0 rounded-4">
+                        <div class="position-relative overflow-hidden" style="height: 240px;">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover transition-scale" alt="Quadro Elétrico e Painel de Comando">
+                            <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 rounded-pill small">
+                                <i class="fa-solid fa-bolt me-1 text-primary"></i> Eletroeletrônica
+                            </span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark mb-2">Quadros Elétricos & Painéis de Comando</h5>
+                            <p class="card-text text-muted small mb-4">Projeto estruturado, dimensionamento de baixa tensão, barramentos e montagem de painéis de manobra e proteção.</p>
+                            <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
+                                <span class="text-primary small fw-semibold">Infraestrutura</span>
+                                <a href="#contato" class="btn btn-sm btn-outline-primary rounded-pill px-3">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: Instalação de Fancoil (Link Atualizado) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card shadow-sm h-100 overflow-hidden border-0 rounded-4">
+                        <div class="position-relative overflow-hidden" style="height: 240px;">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover transition-scale" alt="Instalação de Fancoil">
+                            <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 rounded-pill small">
+                                <i class="fa-solid fa-snowflake me-1 text-primary"></i> Climatização Predial
+                            </span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark mb-2">Instalação de Fancoil Empresarial</h5>
+                            <p class="card-text text-muted small mb-4">Implantação de sistema central de climatização de alta performance integrado ao sistema de automação para escritórios corporativos.</p>
+                            <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
+                                <span class="text-primary small fw-semibold">Corporativo</span>
+                                <a href="#contato" class="btn btn-sm btn-outline-primary rounded-pill px-3">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTEGRANTES DA EMPRESA (5 CARDS) -->
+    <section id="equipe" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center section-title">Nossa Equipe de Especialistas</h2>
+            <div class="row g-4 justify-content-center">
+                
+                <!-- Integrante 1 -->
+                <div class="col-md-4 col-lg-4">
+                    <div class="card team-card p-4 text-center h-100">
+                        <img src="karol.jpeg" alt="Karoline" class="team-img mb-3">
+                        <h5 class="fw-bold mb-1">Karoline</h5>
+                        <p class="text-primary small fw-semibold mb-2">CEO & Engenheira de Software</p>
+                        <p class="text-muted small mb-3">Mais de 15 anos de experiência liderando projetos de grande porte em automação.</p>
+                        <div class="social-icons fs-5">
+                            <a href="https://www.linkedin.com/in/karoline-marques-433089436?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="me-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrante 2 -->
+                <div class="col-md-4 col-lg-4">
+                    <div class="card team-card p-4 text-center h-100">
+                        <img src="manu.jpeg" alt="Manuela Alves" class="team-img mb-3">
+                        <h5 class="fw-bold mb-1">Manuela Alves</h5>
+                        <p class="text-primary small fw-semibold mb-2">Engenheira Eletricista & Desenvolvedora Backend</p>
+                        <p class="text-muted small mb-3">Especialista em integração de sistemas inteligentes, redes e infraestrutura predial.</p>
+                        <div class="social-icons fs-5">
+                            <a href="https://www.linkedin.com/in/manoellaalves-santana" class="me-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrante 3 -->
+                <div class="col-md-4 col-lg-4">
+                    <div class="card team-card p-4 text-center h-100">
+                        <img src="hm.jpeg" alt="Henrique" class="team-img mb-3">
+                        <h5 class="fw-bold mb-1">Henrique</h5>
+                        <p class="text-primary small fw-semibold mb-2">Técnico em Energias Renováveis & Gestor de Eficiência Energética</p>
+                        <p class="text-muted small mb-3">Responsável pela execução técnica dos projetos de segurança e quadros de comando.</p>
+                        <div class="social-icons fs-5">
+                            <a href="https://www.linkedin.com/in/henrique-campos-552926333" class="me-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrante 4 -->
+                <div class="col-md-4 col-lg-4">
+                    <div class="card team-card p-4 text-center h-100">
+                        <img src="juan.jpeg" alt="Juan Pablo" class="team-img mb-3">
+                        <h5 class="fw-bold mb-1">Juan Pablo</h5>
+                        <p class="text-primary small fw-semibold mb-2">Arquiteto de Soluções Smart</p>
+                        <p class="text-muted small mb-3">Focado em entregar interfaces intuitivas e conectividade para automação residencial.</p>
+                        <div class="social-icons fs-5">
+                            <a href="https://www.linkedin.com/in/juan-silva-49a21341b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="me-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrante 5 -->
+                <div class="col-md-4 col-lg-4">
+                    <div class="card team-card p-4 text-center h-100">
+                        <img src="joao.jpeg" alt="João Pedro" class="team-img mb-3">
+                        <h5 class="fw-bold mb-1">João Pedro</h5>
+                        <p class="text-primary small fw-semibold mb-2">Automação Industrial & Desenvolvedor Front-end</p>
+                        <p class="text-muted small mb-3">Garante a eficiência operacional, manutenção preventiva e suporte contínuo aos clientes.</p>
+                        <div class="social-icons fs-5">
+                            <a href="https://www.linkedin.com/in/joao-pedro-barbosa-amaral-82a03927b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="me-2" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- DEPOIMENTOS (VERSÃO PREMIUM CORRIGIDA) -->
+    <section id="depoimentos" class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);">
+        <!-- Elementos decorativos de fundo (Glows) -->
+        <div class="position-absolute top-0 start-50 translate-middle-x bg-primary opacity-10 rounded-circle" style="width: 500px; height: 500px; filter: blur(90px); pointer-events: none;"></div>
+        
+        <div class="container py-5 position-relative z-1">
+            <!-- Cabeçalho -->
+            <div class="text-center mb-5">
+                <span class="badge bg-primary text-white mb-2 px-3 py-2 rounded-pill fw-normal shadow-sm">
+                    <i class="fa-solid fa-award me-1"></i> Prova Social & Confiança
+                </span>
+                <h2 class="section-title mb-3" style="color: #ffffff !important;">O que dizem nossos clientes</h2>
+                <p class="text-light opacity-75 col-lg-6 mx-auto small">Histórias reais de quem confiou na engenharia, automação e precisão da Optigrid.</p>
+                
+                <!-- Nota Média Global -->
+                <div class="d-inline-flex align-items-center bg-white bg-opacity-10 px-4 py-2 rounded-pill border border-white border-opacity-10 mt-3 shadow-sm">
+                    <div class="text-warning me-2 fs-6">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="fw-bold text-white me-2">4.9 / 5.0</span>
+                    <span class="text-light opacity-75 small">(+120 Projetos Entregues)</span>
+                </div>
+            </div>
+
+            <!-- Cards de Depoimentos em Grid -->
+            <div class="row g-4 align-items-stretch">
+    
+    <!-- Cliente 1 -->
+    <div class="col-lg-4">
+        <div class="card bg-white bg-opacity-10 border border-white border-opacity-15 rounded-4 p-4 h-100 shadow-lg text-white">
+            <div class="d-flex align-items-center mb-3">
+                <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="text-light opacity-90 small fst-italic mb-4">"A Optigrid transformou completamente o sistema elétrico e de automação da nossa sede. O ganho de eficiência foi imediato."</p>
+            <div class="mt-auto d-flex align-items-center pt-3 border-top border-white border-opacity-15">
+                <div>
+                    <h6 class="fw-bold text-white mb-0">Alberto Tsuda</h6>
+                    <p class="text-info small mb-0">Diretor Administrativo</p>
+                </div>
+                <span class="ms-auto badge bg-success text-white rounded-pill px-2 py-1" style="font-size: 0.7rem;">Verificado</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cliente 2 (Destaque Principal) -->
+    <div class="col-lg-4">
+        <div class="card border-2 border-primary rounded-4 p-4 h-100 shadow-lg position-relative text-white" style="background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);">
+            <div class="position-absolute top-0 end-0 translate-middle-y me-4">
+                <span class="badge bg-primary text-white px-3 py-1 rounded-pill shadow">Destaque</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <div class="text-warning fs-5">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="text-white fst-italic mb-4">"Profissionais extremamente capacitados. O projeto residencial superou todas as nossas expectativas de conforto, segurança e automação inteligente."</p>
+            <div class="mt-auto d-flex align-items-center pt-3 border-top border-white border-opacity-15">
+                <div>
+                    <h6 class="fw-bold text-white mb-0">João Wellington</h6>
+                    <p class="text-info small mb-0">Proprietária Residencial</p>
+                </div>
+                <span class="ms-auto badge bg-success text-white rounded-pill px-2 py-1" style="font-size: 0.7rem;">Verificado</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cliente 3 -->
+    <div class="col-lg-4">
+        <div class="card bg-white bg-opacity-10 border border-white border-opacity-15 rounded-4 p-4 h-100 shadow-lg text-white">
+            <div class="d-flex align-items-center mb-3">
+                <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="text-light opacity-90 small fst-italic mb-4">"Agilidade e perfeição técnica na infraestrutura eletroeletrônica do nosso centro logístico. Parceria de longo prazo fechada!"</p>
+            <div class="mt-auto d-flex align-items-center pt-3 border-top border-white border-opacity-15">
+                <div>
+                    <h6 class="fw-bold text-white mb-0">Fernando Corssales</h6>
+                    <p class="text-info small mb-0">Gerente de Operações</p>
+                </div>
+                <span class="ms-auto badge bg-success text-white rounded-pill px-2 py-1" style="font-size: 0.7rem;">Verificado</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cliente 4 -->
+    <div class="col-lg-4">
+        <div class="card bg-white bg-opacity-10 border border-white border-opacity-15 rounded-4 p-4 h-100 shadow-lg text-white">
+            <div class="d-flex align-items-center mb-3">
+                <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="text-light opacity-90 small fst-italic mb-4">"A redução de custos com energia na nossa planta industrial foi notável após a otimização da rede. Excelente equipe de engenharia."</p>
+            <div class="mt-auto d-flex align-items-center pt-3 border-top border-white border-opacity-15">
+                <div>
+                    <h6 class="fw-bold text-white mb-0">Matheus Viera</h6>
+                    <p class="text-info small mb-0">Engenheira de Planta</p>
+                </div>
+                <span class="ms-auto badge bg-success text-white rounded-pill px-2 py-1" style="font-size: 0.7rem;">Verificado</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cliente 5 -->
+    <div class="col-lg-4">
+        <div class="card bg-white bg-opacity-10 border border-white border-opacity-15 rounded-4 p-4 h-100 shadow-lg text-white">
+            <div class="d-flex align-items-center mb-3">
+                <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="text-light opacity-90 small fst-italic mb-4">"Pontualidade no prazo de entrega e suporte pós-instalação exemplar. Solucionaram todas as falhas recorrentes do nosso prédio."</p>
+            <div class="mt-auto d-flex align-items-center pt-3 border-top border-white border-opacity-15">
+                <div>
+                    <h6 class="fw-bold text-white mb-0">Rodrigo fernandes</h6>
+                    <p class="text-info small mb-0">Síndico Profissional</p>
+                </div>
+                <span class="ms-auto badge bg-success text-white rounded-pill px-2 py-1" style="font-size: 0.7rem;">Verificado</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cliente 6 -->
+    <div class="col-lg-4">
+        <div class="card bg-white bg-opacity-10 border border-white border-opacity-15 rounded-4 p-4 h-100 shadow-lg text-white">
+            <div class="d-flex align-items-center mb-3">
+                <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="text-light opacity-90 small fst-italic mb-4">"Implementaram um painel de controle e monitoramento em tempo real que facilitou totalmente a rotina do nosso time técnico."</p>
+            <div class="mt-auto d-flex align-items-center pt-3 border-top border-white border-opacity-15">
+                <div>
+                    <h6 class="fw-bold text-white mb-0"> Camila  silva</h6>
+                    <p class="text-info small mb-0">Coordenadora de TI</p>
+                </div>
+                <span class="ms-auto badge bg-success text-white rounded-pill px-2 py-1" style="font-size: 0.7rem;">Verificado</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center section-title">Entre em Contato</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm p-4 p-md-5 bg-white rounded-4">
+                        <form action="https://formsubmit.co/optigrid2026@gmail.com" method="POST" id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nome" class="form-label small fw-bold">Seu Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label small fw-bold">Seu E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensagem" class="form-label small fw-bold">Mensagem / Projeto</label>
+                                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Descreva sua necessidade..." required></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary px-5 py-2 w-100 shadow-sm">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="formAlert" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-1 text-light">&copy; 2026 Optigrid Automação e Instalações. Todos os direitos reservados.</p>
+            <p class="small text-secondary mb-0">Desenvolvido com Bootstrap 5 & JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Customizado -->
+    <script>
+        // Efeito na navbar ao rolar a página
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark', 'shadow');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.add('bg-dark');
+            }
+        });
+
+        // Formulário de contato com feedback visual
+        const contactForm = document.getElementById('contactForm');
+        const formAlert = document.getElementById('formAlert');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            
+            formAlert.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show rounded-3" role="alert">
+                    Obrigado, <strong>${nome}</strong>! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
